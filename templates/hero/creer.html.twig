@@ -1,0 +1,38 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HeroController!{% endblock %}
+
+{% block body %}
+
+{{ form_start(formulaire) }}
+
+  <div class="Hform">
+    <div class="Fname">
+        {{form_widget(formulaire.name,{'attr': {'placeholder': 'Nom'}})}}
+    </div>
+
+    <div class="Flastname">
+        {{form_widget(formulaire.firstname,{'attr': {'placeholder': 'Nom de Famille'}})}}
+    </div>
+
+    <div class="Fpseudo">
+        {{form_widget(formulaire.pseudo,{'attr': {'placeholder': 'Pseudo'}})}}
+    </div>
+
+    <div class="Fdescript">
+        {{form_widget(formulaire.description,{'attr': {'placeholder': 'Description'}})}}
+    </div>
+
+    <div class="FisEvil">
+        <span>Est-il méchant</span>
+        {{form_widget(formulaire.isEvil)}}
+    </div>
+
+    <div class="Fsave">
+        {{form_row(formulaire.save,{'label': 'Enregistrer' })}}
+    </div>
+  </div>  
+
+{{ form_end(formulaire)}}
+{% endblock %}
